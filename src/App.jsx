@@ -38,7 +38,7 @@ export default function App() {
     <>
       <NavBar>
         <Search query={query} setQuery={setQuery} />
-        <NumResults movies={movies} />
+        {/*<NumResults movies={movies} />*/}
       </NavBar>
 
       <Main>
@@ -95,7 +95,7 @@ ErrorMessage.propTypes = {
 };
 function NavBar({ children }) {
   return (
-    <nav className="grid grid-cols-3 items-center h-[7.2rem] px-[3.2rem] bg-[var(--color-primary)] rounded-[0.9rem]">
+    <nav className="flex flex-wrap justify-between items-center px-[3.2rem] bg-[var(--color-primary)] rounded-[0.9rem]">
       <Logo />
       {children}
     </nav>
@@ -107,21 +107,22 @@ NavBar.propTypes = {
 };
 function Logo() {
   return (
-    <div className="flex items-center gap-[0.8rem]">
-      <span className="text-[3.2rem]">🍿</span>
-      <h1 className="text-[2.4rem] font-semibold text-[#fff]">Popcorn</h1>
-    </div>
+          <div className="flex items-center gap-[0.8rem] ">
+              <span className="text-[3.2rem]">🍿</span>
+              <h1 className="text-[2.4rem] font-semibold text-[#fff]">Popcorn</h1>
+          </div>
+
   );
 }
 
-function Search({ query, setQuery }) {
-  const inputEl = useRef(null);
+function Search({query, setQuery}) {
+    const inputEl = useRef(null);
 
-  useEffect(function () {
-    inputEl.current.focus();
-  }, []);
+    useEffect(function () {
+        inputEl.current.focus();
+    }, []);
 
-  useKey("Enter", function () {
+    useKey("Enter", function () {
     if (document.activeElement === inputEl.current) return;
 
     inputEl.current.focus();
@@ -130,7 +131,7 @@ function Search({ query, setQuery }) {
 
   return (
     <input
-      className="search justify-self-center border-none py-[1.1rem] px-[1.6rem] text-[1.8rem] rounded-[0.7rem] w-[40rem] bg-[var(--color-primary-light)] text-[var(--color-text)] transition-all placeholder:text-[var(--color-text-dark)]"
+      className="search w-[100%] justify-self-center border-none py-[1.1rem] px-[1.6rem] my-[1.1rem] text-[1.8rem] rounded-[0.7rem]  bg-[var(--color-primary-light)] text-[var(--color-text)] transition-all placeholder:text-[var(--color-text-dark)] sm:w-[40rem]"
       type="text"
       placeholder="Search movies..."
       value={query}
@@ -145,28 +146,30 @@ Search.propTypes = {
   setQuery: PropTypes.func.isRequired,
 };
 
-function NumResults({ movies }) {
-  return (
-    <p className="justify-self-end text-[1.8rem]">
-      Found <strong>{movies.length}</strong> results
-    </p>
-  );
-}
+// function NumResults({ movies }) {
+//   return (
+//       <div className='grid grid-cols-1 grid-rows-6'>
+//     <p className="justify-self-end text-[1.8rem] ">
+//       Found <strong>{movies.length}</strong> results
+//     </p>
+//       </div>
+//   );
+// }
 
-NumResults.propTypes = {
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({
-      imdbID: PropTypes.string.isRequired,
-      Title: PropTypes.string.isRequired,
-      Year: PropTypes.string.isRequired,
-      Poster: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};
+// NumResults.propTypes = {
+//   movies: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       imdbID: PropTypes.string.isRequired,
+//       Title: PropTypes.string.isRequired,
+//       Year: PropTypes.string.isRequired,
+//       Poster: PropTypes.string.isRequired,
+//     })
+//   ).isRequired,
+// };
 
 function Main({ children }) {
   return (
-    <main className="mt-[2.4rem] h-[calc(100vh-7.2rem-3*2.4rem)] flex gap-[2.4rem] justify-center">
+    <main className="mt-[2.4rem] h-[calc(100vh-7.2rem-3*2.4rem)] flex gap-[2.4rem] justify-center flex-wrap">
       {children}
     </main>
   );
