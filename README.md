@@ -1,12 +1,23 @@
-<<<<<<< HEAD
-# Popcorn
-=======
-# React + Vite
+# 🎬🍿 Movie Info App  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive and engaging application for retrieving movie information using React and Tailwind CSS. With this app, you can easily search for movie names and view comprehensive information, including actor photos, ratings, and other details.  
 
-Currently, two official plugins are available:
+## 🍿🌟 Features  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
->>>>>>> 8b02bd5 (Initial commit)
+- **Movie Search:** Easily search for movie titles.  
+- **Comprehensive Information:** Includes actor photos, ratings, and other movie details.  
+- **Responsive Design:** Excellent user experience on all devices.  
+
+## 🔗🍿 Project Link  
+
+To view the live project, click on this [link](https://popcorn-six-orcin.vercel.app/).  
+
+## 🍿📄 Technologies Used  
+
+- React  
+- Tailwind CSS  
+- Axios (for API requests)  
+
+## 👥🍿 Contributing  
+
+If you are interested in collaborating or providing suggestions, we would love to have you on this project!!
