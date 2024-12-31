@@ -8,6 +8,9 @@
 - **Movie Search:** Easily search for movie titles.  
 - **Comprehensive Information:** Includes actor photos, ratings, and other movie details.  
 - **Responsive Design:** Excellent user experience on all devices.  
+- **playlist:** Includes a playlist for saving desired movies.
+
+ 
 
 
 ## 🔗🍿 Project Link  
