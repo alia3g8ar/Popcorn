@@ -1,7 +1,7 @@
 # 🎬🍿 Movie Info App  
 
-A responsive and engaging application for retrieving movie information using React and Tailwind CSS. With this app, you can easily search for movie names and view comprehensive information, including actor photos, ratings, and other details.  
 
+"A responsive and engaging application for retrieving movie information using React and Tailwind CSS. With this app, you can easily search for movie names, view comprehensive information, including actor photos, ratings, and other details, and save your favorite movies in a personalized playlist."
 
 ## 🍿🌟 Features  
 
